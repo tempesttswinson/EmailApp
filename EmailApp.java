@@ -4,7 +4,10 @@ public class EmailApp {
 
         Email em1 = new Email("John", "Smith");
 
-        em1.setAlternateEmail("js@gmail.com");
-        System.out.println(em1.getAlternateEmail());
+        // testing setting and getting alternate email
+        // em1.setAlternateEmail("js@gmail.com");
+        // System.out.println(em1.getAlternateEmail());
+
+        System.out.println(em1.showInfo());
     }
 }
