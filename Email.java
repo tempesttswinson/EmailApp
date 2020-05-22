@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Email {
     // properties
-    private String firstName, lastName, password, department, altEmail;
+    private String firstName, lastName, password, department, altEmail, email;
+    private String companySuffix = "aeycompany.com";
     private int mailbaoxCap;
     private int defaultPasswordLength = 10;
 
@@ -19,6 +20,10 @@ public class Email {
         // call a method that returns a random password
         this.password = randomPassword(defaultPasswordLength);
         System.out.println("Your password is: " + this.password);
+
+        // combine elements to generate email
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+        System.out.println("Your email is: " + email);
     }
 
     // ask for the department
@@ -47,7 +52,6 @@ public class Email {
             password[i] = passwordSet.charAt(rand);
         }
         return new String(password);
-
     }
 
     // set mailbox capacity
