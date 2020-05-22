@@ -4,7 +4,7 @@ public class Email {
     // properties
     private String firstName, lastName, password, department, altEmail, email;
     private String companySuffix = "aeycompany.com";
-    private int mailbaoxCap;
+    private int mailbaoxCap = 500;
     private int defaultPasswordLength = 10;
 
     // constructor to recieve the first name and last name
@@ -55,9 +55,31 @@ public class Email {
     }
 
     // set mailbox capacity
+    public void setMailboxCapacity(int capacity) {
+        this.mailbaoxCap = capacity;
+    }
 
     // set the alternate email
+    public void setAlternateEmail(String altEmail) {
+        this.altEmail = altEmail;
+    }
 
     // change the password
+    public void changePassword(String password) {
+        this.password = password;
+    }
+
+    // get methods
+    public int getMailboxCapacity() {
+        return mailbaoxCap;
+    }
+
+    public String getAlternateEmail() {
+        return altEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
 }
